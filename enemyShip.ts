@@ -1,14 +1,12 @@
 interface iEnemyShip {
-    xOffset: number;
-    yOffset: number;
     behaviour(formationCenter: Sprite): void;
 }
 
 class EnemyShip extends sprites.ExtendableSprite implements iEnemyShip {
-    public xOffset: number;
-    public yOffset: number;
     readonly shotSpeed: number = 70;
     readonly fireRate: number = 250;
+    private xOffset: number;
+    private yOffset: number;
 
     constructor(startX: number, startY: number) {
         super(randint(0, 1) == 1 ? assets.image`enemy ship 1`: assets.image`enemy ship 2`, SpriteKind.Enemy)
