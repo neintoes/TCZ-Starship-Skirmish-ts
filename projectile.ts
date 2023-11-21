@@ -1,6 +1,6 @@
 abstract class BaseProjectile extends sprites.ExtendableSprite{
-    public speed: number;
-    angle?: number;
+    private speed: number;
+    private angle?: number;
 
     constructor(originSprite: Sprite, projectileImage: Image, spritekind: number, speed: number, angle?: number) {
         super(projectileImage, spritekind);
