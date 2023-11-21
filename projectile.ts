@@ -1,8 +1,3 @@
-interface iProjectile {
-    speed: number;
-}
-
-// NOTE: may need a pause for shooting at an angle
 abstract class BaseProjectile extends sprites.ExtendableSprite{
     public speed: number;
     angle: number = null;
@@ -31,26 +26,26 @@ abstract class BaseProjectile extends sprites.ExtendableSprite{
     }
 }
 
-class PlayerProjectile extends BaseProjectile implements iProjectile {
+class PlayerProjectile extends BaseProjectile {
     constructor(originSprite: Sprite, speed: number, angle?: number) {
         super(originSprite, assets.image`player projectile`, SpriteKind.Projectile, -speed, angle);
         music.thump.play();
     }
 }
 
-class EnemyProjectile extends BaseProjectile implements iProjectile {
+class EnemyProjectile extends BaseProjectile {
     constructor(originSprite: Sprite, speed:number, angle?: number) {
         super(originSprite, assets.image`enemy projectile`, SpriteKind.EnemyProjectile, speed, angle);
         music.pewPew.play();
     }
 }
 
-// GH1
-class BossProjectile extends BaseProjectile implements iProjectile {
+// (IGNORE FOR GH1) GH2
+class BossProjectile extends BaseProjectile {
     constructor(originSprite: Sprite, speed:number, angle?: number) {
         super(originSprite, assets.image`enemy projectile`, SpriteKind.EnemyProjectile, speed, angle);
         this.scale = 5;
         music.pewPew.play();
     }
 }
-// end GH1
+// end GH2
