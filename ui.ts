@@ -20,4 +20,4 @@ class PowerupBar extends StatusBarSprite {
         });
     }
 }
-// end GH1// Add your code here
+// end GH1

@@ -10,6 +10,11 @@ class EnemyManager {
         sprites.allOfKind(SpriteKind.Enemy).forEach(function (enemy: EnemyShip) {
             enemy.behaviour(this.formationCenter);
         });
+        // GH2
+        sprites.allOfKind(SpriteKind.Boss).forEach(function(boss: Boss) {
+            boss.behaviour(this.formationCenter);
+        });
+        // end GH2
     }
 
     public spawnWave(): void {

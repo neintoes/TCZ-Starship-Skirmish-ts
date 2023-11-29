@@ -40,11 +40,11 @@ class EnemyProjectile extends BaseProjectile {
     }
 }
 
-// (IGNORE FOR GH1) GH2
+// GH2
 class BossProjectile extends BaseProjectile {
     constructor(originSprite: Sprite, speed:number, angle?: number) {
         super(originSprite, assets.image`enemy projectile`, SpriteKind.EnemyProjectile, speed, angle);
-        this.scale = 5;
+        this.scale = 3;
         music.pewPew.play();
     }
 }

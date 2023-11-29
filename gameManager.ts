@@ -1,5 +1,8 @@
 namespace SpriteKind {
     export const EnemyProjectile = SpriteKind.create();
+    // GH2
+    export const Boss = SpriteKind.create();
+    // end GH2
 }
 
 class GameManager {
@@ -11,6 +14,9 @@ class GameManager {
         this.initialisePlayer();
         this.enemyManager = new EnemyManager();
         this.overlapManager = new OverlapManager(this.playerSprite);
+        // GH2
+        this.scoreEvents();
+        // end GH2
         this.onUpdates();
         this.onUpdateIntervals();
         effects.starField.startScreenEffect()
@@ -21,6 +27,14 @@ class GameManager {
         info.setLife(3);
         this.playerSprite = new PlayerSprite();
     }
+
+    // GH2
+    private scoreEvents(): void {
+        info.onScore(5000, function(): void {
+            new Boss();
+        })
+    }
+    // end GH2
 
     private onUpdates(): void {
         game.onUpdate(function(): void {
