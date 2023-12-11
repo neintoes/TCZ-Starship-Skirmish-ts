@@ -20,7 +20,9 @@
         "enemyShip.ts",
         "enemyManager.ts",
         "overlapManager.ts",
-        "ui.ts"
+        "ui.ts",
+        "pickups.ts",
+        "Shield.ts"
     ],
     "testFiles": [
         "test.ts"

@@ -3,6 +3,10 @@ namespace SpriteKind {
     // GH2
     export const Boss = SpriteKind.create();
     // end GH2
+    // GH3
+    export const Shield = SpriteKind.create();
+    export const ShieldPickup = SpriteKind.create();
+    // end GH3
 }
 
 class GameManager {

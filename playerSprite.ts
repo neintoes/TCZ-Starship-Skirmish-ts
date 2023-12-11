@@ -5,6 +5,9 @@ class PlayerSprite extends sprites.ExtendableSprite {
     // GH1
     public powerupBar: PowerupBar;
     // end GH1
+    // GH3
+    private shield: Shield;
+    // end GH3
     
     constructor() {
         super(assets.image`ship`, SpriteKind.Player);
@@ -60,6 +63,13 @@ class PlayerSprite extends sprites.ExtendableSprite {
     }
     // end GH1
 
+    // GH3
+    public activateShield(): void {
+        this.shield = new Shield(this);
+    }
+    // end GH3
+
+
     private movement() {
         if(controller.left.isPressed()) {
             this.vx -= this.speed;
@@ -68,5 +78,10 @@ class PlayerSprite extends sprites.ExtendableSprite {
             this.vx += this.speed;
         }
         this.vx *= this.deceleration;
+        // GH3
+        if(this.shield) {
+            this.shield.setPosition(this.x, this.y);
+        }
+        // end GH3
     }
 }

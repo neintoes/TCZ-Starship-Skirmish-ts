@@ -29,6 +29,16 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "boss"
     },
+    "image7": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGZmAAAAAABgmZkGAAAAAJaZmWkAAAAAlpmZaQAAAACWmZlpAAAAAJaZmWkAAAAAYJmZBgAAAAAAZmYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "shield pickup"
+    },
+    "image8": {
+        "data": "hwQQABAAAAAAAGZmZmYAAABgmZmZmQYAAJYAAAAAaQBgCQAAAACQBpYAAAAAAABplgAAAAAAAGmWAAAAAAAAaZYAAAAAAABplgAAAAAAAGmWAAAAAAAAaZYAAAAAAABplgAAAAAAAGlgCQAAAACQBgCWAAAAAGkAAGCZmZmZBgAAAGZmZmYAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "shield"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
